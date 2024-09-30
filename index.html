@@ -12,20 +12,17 @@
   <body>
     <section id="slowoDiv" class="brak" style="display: none">
       <button onclick="location.reload()">Powrót</button>
-      <p id="ilosc"></p>
-      <p id="pl"></p>
-      <p id="eng"></p>
-      <label id="odp">
-        <input
-          type="text"
-          id="odpowiedz"
-          placeholder="Wpisz tłumaczenie"
-          autofocus
-        />
-      </label>
-      <button id="sprawdz">Sprawdź</button>
-      <button id="podpowiedz">Podpowiedź</button>
-      <p id="podpowiedzFull"></p>
+      <div id="app">
+        <p id="ilosc"></p>
+        <p id="pl"></p>
+        <p id="eng"></p>
+        <input type="text" id="odpowiedz" placeholder="Wpisz tłumaczenie" autofocus/>
+        <div>
+            <button id="sprawdz">Sprawdź</button>
+            <button id="podpowiedz">Podpowiedź</button>
+        </div>
+        <p id="podpowiedzFull"></p>
+      </div>
     </section>
     <table>
       <tr>
