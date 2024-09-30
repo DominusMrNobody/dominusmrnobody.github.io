@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./style/style.css">
+    <script src="./script/jquery-3.7.1.js"></script>
+    <script src="./script/data.js"></script>
+    <script src="./script/main.js"></script>
+    <title>Angielski</title>
+  </head>
+  <body>
+    <section id="slowoDiv" class="brak" style="display: none">
+      <button onclick="location.reload()">Powrót</button>
+      <div id="app">
+        <p id="ilosc"></p>
+        <p id="pl"></p>
+        <p id="eng"></p>
+        <input type="text" id="odpowiedz" placeholder="Wpisz tłumaczenie" autofocus/>
+        <div>
+            <button id="sprawdz">Sprawdź</button>
+            <button id="podpowiedz">Podpowiedź</button>
+        </div>
+        <p id="podpowiedzFull"></p>
+      </div>
+    </section>
+    <table>
+      <tr>
+        <th>Nazwa</th>
+        <th>Opis</th>
+        <th>Opcje</th>
+      </tr>
+      <tr>
+        <td>Repetytorium - IV (P.1)</td>
+        <td>Praca - Jobs And Professions (P.1)</td>
+        <td><button onclick="wyborListy('p1')">DRAW</button></td>
+      </tr>
+      <tr>
+        <td>Repetytorium - IV (P.2)</td>
+        <td>Praca - Jobs And Professions (P.2), Temporary Jobs</td>
+        <td><button onclick="wyborListy('p2')">DRAW</button></td>
+      </tr>
+      <tr>
+        <td>Repetytorium - IV (P.3)</td>
+        <td>Praca - Job-Related Duties And Activities</td>
+        <td><button onclick="wyborListy('p3')">DRAW</button></td>
+      </tr>
+      <tr>
+        <td>Repetytorium - IV (P.4)</td>
+        <td>Praca - Place Of Work</td>
+        <td><button onclick="wyborListy('p4')">DRAW</button></td>
+      </tr>
+      <tr>
+        <td>Repetytorium - IV (P.5)</td>
+        <td>Praca - Choosing A Career And Looking For A Job</td>
+        <td><button onclick="wyborListy('p5')">DRAW</button></td>
+      </tr>
+      <tr>
+        <td>Repetytorium - IV (P.6)</td>
+        <td>Praca - Professional Career, The Job Market, Job Mobility</td>
+        <td><button onclick="wyborListy('p6')">DRAW</button></td>
+      </tr>
+      <tr>
+        <td>Repetytorium - IV (P.7)</td>
+        <td>Praca - Working And Employment Conditions</td>
+        <td><button onclick="wyborListy('p7')">DRAW</button></td>
+      </tr>
+      <tr>
+        <td>Repetytorium - IV (P.8)</td>
+        <td>Praca - Adjectives To Describe Jobs, Phrases With Work</td>
+        <td><button onclick="wyborListy('p8')">DRAW</button></td>
+      </tr>
+      <tr>
+        <td>Repetytorium - IV (P.9)</td>
+        <td>Praca - Verbs And Phrases</td>
+        <td><button onclick="wyborListy('p9')">DRAW</button></td>
+      </tr>
+      <tr>
+        <td>Repetytorium - IV - dodatkowe</td>
+        <td>Słowotwórstwo</td>
+        <td><button onclick="wyborListy('p10')">DRAW</button></td>
+      </tr>
+    </table>
+</body>
+</html>
