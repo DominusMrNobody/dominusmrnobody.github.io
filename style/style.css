@@ -28,8 +28,6 @@ td > button {
     margin: 5px;
 }
 
-
-
 #sprawdz, #podpowiedz {
     background-color: black;
     color: white;
@@ -54,15 +52,11 @@ td > button {
 }
 
 
-
-
-
 input:disabled {
   color: black;
   border-color: black;
 }
-input.tAnswer:disabled,
-#eng {
+input.tAnswer:disabled, #eng {
   background-color: rgb(153, 253, 220);
 }
 input.fAnswer:disabled {

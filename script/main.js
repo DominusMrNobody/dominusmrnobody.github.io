@@ -32,6 +32,9 @@ function pobierzSlowa() {
     case "p9":
       slowa = allWords.p9;
       break;
+    case "p10":
+      slowa = allWords.p10;
+      break;
   }
 
   $("#ilosc").text(slowa.length);
