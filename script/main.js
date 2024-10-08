@@ -32,9 +32,6 @@ function pobierzSlowa() {
     case "p9":
       slowa = allWords.p9;
       break;
-    case "p10":
-      slowa = allWords.p10;
-      break;
   }
 
   $("#ilosc").text(slowa.length);
@@ -65,8 +62,8 @@ function losujSlowo() {
     $("#eng").text("");
     $("#odpowiedz").val("");
     $("#podpowiedzFull").text("");
-    $("#podpowiedz").click(function () {
-      $("#podpowiedzFull").text(wylosowaneSlowo.eng[0]);
+
+    $("#podpowiedz").click(function() {
       $("#podpowiedzFull").text(wylosowaneSlowo.eng[0]);
       for (let i = 1; i < wylosowaneSlowo.eng.length; i++) {
         if (
@@ -78,6 +75,24 @@ function losujSlowo() {
           );
         } else {
           $("#podpowiedzFull").text($("#podpowiedzFull").text() + "_");
+        }
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Control") {
+        $("#podpowiedzFull").text(wylosowaneSlowo.eng[0]);
+        for (let i = 1; i < wylosowaneSlowo.eng.length; i++) {
+          if (
+            wylosowaneSlowo.eng[i] == " " ||
+            wylosowaneSlowo.eng[i] == "-"
+          ) {
+            $("#podpowiedzFull").text(
+              $("#podpowiedzFull").text() + wylosowaneSlowo.eng[i]
+            );
+          } else {
+            $("#podpowiedzFull").text($("#podpowiedzFull").text() + "_");
+          }
         }
       }
     });
