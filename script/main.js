@@ -71,7 +71,9 @@ function losujSlowo() {
       for (let i = 1; i < wylosowaneSlowo.eng.length; i++) {
         if (
           wylosowaneSlowo.eng[i] == " " ||
-          wylosowaneSlowo.eng[i] == "-"
+          wylosowaneSlowo.eng[i] == "-" ||
+          wylosowaneSlowo.eng[i] == "'" ||
+          wylosowaneSlowo.eng[i] == "/"
         ) {
           $("#podpowiedzFull").text(
             $("#podpowiedzFull").text() + wylosowaneSlowo.eng[i]
@@ -87,8 +89,10 @@ function losujSlowo() {
         $("#podpowiedzFull").text(wylosowaneSlowo.eng[0]);
         for (let i = 1; i < wylosowaneSlowo.eng.length; i++) {
           if (
-            wylosowaneSlowo.eng[i] == " " ||
-            wylosowaneSlowo.eng[i] == "-"
+          wylosowaneSlowo.eng[i] == " " ||
+          wylosowaneSlowo.eng[i] == "-" ||
+          wylosowaneSlowo.eng[i] == "'" ||
+          wylosowaneSlowo.eng[i] == "/"
           ) {
             $("#podpowiedzFull").text(
               $("#podpowiedzFull").text() + wylosowaneSlowo.eng[i]
