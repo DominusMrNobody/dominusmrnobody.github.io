@@ -35,6 +35,18 @@ function pobierzSlowa() {
     case "p10":
       slowa = allWords.p10;
       break;
+    case "p11":
+      slowa = allWords.p11;
+      break;
+    case "p12":
+      slowa = allWords.p12;
+      break;
+    case "p13":
+      slowa = allWords.p13;
+      break;
+    case "p14":
+      slowa = allWords.p14;
+      break;
   }
 
   $("#ilosc").text(slowa.length);
