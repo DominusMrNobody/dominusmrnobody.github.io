@@ -48,7 +48,7 @@ $(document).ready(function () {
 
       $("#pl").text(drawnWord.pl);
       $("#eng").text("");
-      $("#translation").val("").prop("disabled", false);
+      $("#translation").prop("readonly", false);
       $("#prompt-full").text("");
       setTimeout(() => {
         $("#translation").focus();
@@ -85,28 +85,31 @@ $(document).ready(function () {
         $("#translation").css("background-color", "rgb(255, 118, 171)");
       }
 
-      updateStats();
       waitingForNext = true;
 
       $('#prompt-button').hide();
       $('#check').text("Następny");
       $("#translation").prop("readonly", true);
+
+      updateStats();
     } else {
-      drawWord();
       $("#translation").val("").css("background-color", inputBgColor);
       $('#prompt-button').show();
       $('#eng').hide();
       $('#check').text("Sprawdź");
       $("#translation").prop("readonly", false);
       waitingForNext = false;
+
+      drawWord();
     }
   }
 
   $("#prompt-button").on("click", function() {
-    showHint();
     setTimeout(() => {
       $("#translation").focus();
     }, 0);
+
+    showHint();
   });
 
   $(document).on("keydown", function (event) {
@@ -122,7 +125,11 @@ $(document).ready(function () {
 
   $("#check").on("click", function (event) {
     event.preventDefault();
-      check();
+    setTimeout(() => {
+      $("#translation").focus();
+    }, 0);
+    
+    check();
   });
 
   $("#return").on("click", function () {
