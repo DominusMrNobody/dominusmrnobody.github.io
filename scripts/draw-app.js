@@ -50,7 +50,7 @@ $(document).ready(function () {
       $("#eng").text("");
       $("#translation").val("").prop("disabled", false);
       $("#prompt-full").text("");
-      //$("#translation").focus();
+      $("#translation").focus();
     } else if (availableWords.length === 0 && words.length > 0) {
       for (let i = 0; i < words.length; i++) {
         words[i].check = 0;
@@ -58,6 +58,7 @@ $(document).ready(function () {
       drawWord();
     } else {
       alert("Wszystkie słowa zostały już sprawdzone.");
+      window.location.href = "chapter-menu.html";
     }
   }
 
@@ -99,7 +100,10 @@ $(document).ready(function () {
     }
   }
 
-  $("#prompt-button").on("click", showHint);
+  $("#prompt-button").on("click", function() {
+    showHint();
+    $("#translation").focus();
+  });
 
   $(document).on("keydown", function (event) {
     if (event.key === "Control") showHint();
