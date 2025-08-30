@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="./styles/style.css">
+  <script src="./scripts/jquery-3.7.1.js" defer></script>
+  <script src="./scripts/list-app.js" defer></script>
+  <script src="./data/vocabulary-list.js" defer></script>
+  <title>Lista</title>
+</head>
+<body>
+  <header>
+    <h6 id="return" class="header-nav">Powrót</h6>
+    <h1 id="title"></h1>
+    <h6 id="home" class="header-nav">Strona Główna</h6>
+  </header>
+  <section>
+    <ul class='nav-div header-div'>
+      <li id="draw">Wpisuj z polskiego na angielski</li>
+      <li id="test">Test dopasuj polskie znaczenie</li>
+      <li id="flashcards">Fiszki</li>
+    </ul>
+  </section>
+  <main>
+    <div id="vocabulary-list">
+      <h3>Lista słówek</h3>
+      <h4 id="vocabulary-quantity"></h4>
+      <table>
+        <tr>
+          <th>PL</th>
+          <th>ENG</th>
+        </tr>
+      </table>
+    </div>
+  </main>
+</body>
+</html>

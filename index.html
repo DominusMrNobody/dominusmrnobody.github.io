@@ -1,105 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./style/style.css">
-    <script src="./script/jquery-3.7.1.js"></script>
-    <script src="./script/data.js"></script>
-    <script src="./script/main.js"></script>
-    <title>Angielski</title>
-  </head>
-  <body>
-    <section id="slowoDiv" class="brak" style="display: none">
-      <button onclick="location.reload()">Powrót</button>
-      <div id="app">
-        <p id="ilosc"></p>
-        <p id="pl"></p>
-        <p id="eng"></p>
-        <input type="text" id="odpowiedz" placeholder="Wpisz tłumaczenie" autofocus spellcheck="false"/>
-        <div>
-            <button id="sprawdz">Sprawdź</button>
-            <button id="podpowiedz">Podpowiedź</button>
-        </div>
-        <p id="podpowiedzFull"></p>
-      </div>
-    </section>
-    <table>
-      <tr>
-        <th>Nazwa</th>
-        <th>Opis</th>
-        <th>Opcje</th>
-      </tr>
-      <tr>
-        <td>(P.1)</td>
-        <td>TRIPS</td>
-        <td><button onclick="wyborListy('p1')" >DRAW</button></td>
-      </tr>
-      <tr>
-        <td>(P.2)</td>
-        <td>IDIOMS</td>
-        <td><button onclick="wyborListy('p2')" >DRAW</button></td>
-      </tr>
-      <tr>
-        <td>(P.3)</td>
-        <td>SIGHTSEEING</td>
-        <td><button onclick="wyborListy('p3')" >DRAW</button></td>
-      </tr>
-      <tr>
-        <td>(P.2)</td>
-        <td>PLACES TO SEE</td>
-        <td><button onclick="wyborListy('p4')" >DRAW</button></td>
-      </tr>
-      <tr>
-        <td>(P.5)</td>
-        <td>TRAVEL ACCIDENTS AND BREAKDOWNS</td>
-        <td><button onclick="wyborListy('p5')" >DRAW</button></td>
-      </tr>
-      <tr>
-        <td>(P.6)</td>
-        <td>ROAD TRAFFIC</td>
-        <td><button onclick="wyborListy('p6')" >DRAW</button></td>
-      </tr>
-      <tr>
-        <td>(P.7)</td>
-        <td>TRAVEL SAFETY</td>
-        <td><button onclick="wyborListy('p7')" >DRAW</button></td>
-      </tr>
-      <tr>
-        <td>(P.8)</td>
-        <td>AIR TRAVEL</td>
-        <td><button onclick="wyborListy('p8')">DRAW</button></td>
-      </tr>
-      <tr>
-        <td>(P.9)</td>
-        <td>SEA TRAVEL</td>
-        <td><button onclick="wyborListy('p9')">DRAW</button></td>
-      </tr>
-      <tr>
-        <td>(P.10)</td>
-        <td>CAR TRAVEL</td>
-        <td><button onclick="wyborListy('p10')">DRAW</button></td>
-      </tr>
-      <tr>
-        <td>(P.11)</td>
-        <td>CYCLING</td>
-        <td><button onclick="wyborListy('p11')">DRAW</button></td>
-      </tr>
-      <tr>
-        <td>(P.12)</td>
-        <td>SENSE OF DIRECTION</td>
-        <td><button onclick="wyborListy('p12')">DRAW</button></td>
-      </tr>
-      <tr>
-        <td>(P.13)</td>
-        <td>ACCOMODATION</td>
-        <td><button onclick="wyborListy('p13')">DRAW</button></td>
-      </tr>
-      <tr>
-        <td>(P.14)</td>
-        <td>MEANS OF TRANSPORT AND TRAVELLING</td>
-        <td><button onclick="wyborListy('p14')">DRAW</button></td>
-      </tr>
-    </table>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="./styles/style.css">
+  <script src="./scripts/jquery-3.7.1.js" defer></script>
+  <script src="./scripts/app.js" defer></script>
+  <title>Angielski</title>
+</head>
+<body>
+  <header>
+    <h1 id="title"></h1>
+  </header>
+  <nav>
+    <ul class="nav-div">
+      <li id="unit1">
+        <h3 class="nav-title">UNIT 1</h3>
+        <span class="nav-description">Człowiek</span>
+      </li>
+      <li id="unit2">
+        <h3 class="nav-title">UNIT 2</h3>
+        <span class="nav-description">Miejsca zamieszkania</span>
+      </li>
+      <li id="unit3">
+        <h3 class="nav-title">UNIT 3</h3>
+        <span class="nav-description">Edukacja</span>
+      </li>
+      <li id="unit4">
+        <h3 class="nav-title">UNIT 4</h3>
+        <span class="nav-description">Praca</span>
+      </li>
+      <li id="unit5">
+        <h3 class="nav-title">UNIT 5</h3>
+        <span class="nav-description">Życie prywatne</span>
+      </li>
+      <li id="unit6">
+        <h3 class="nav-title">UNIT 6</h3>
+        <span class="nav-description">Żywienie</span>
+      </li>
+      <li id="unit7">
+        <h3 class="nav-title">UNIT 7</h3>
+        <span class="nav-description">Zakupy i usługi</span>
+      </li>
+      <li id="unit8">
+        <h3 class="nav-title">UNIT 8</h3>
+        <span class="nav-description">Podróżowanie</span>
+      </li>
+      <li id="unit9">
+        <h3 class="nav-title">UNIT 9</h3>
+        <span class="nav-description">XXX</span>
+      </li>
+      <li id="unit10">
+        <h3 class="nav-title">UNIT 10</h3>
+        <span class="nav-description">XXX</span>
+      </li>
+      <li id="unit11">
+        <h3 class="nav-title">UNIT 11</h3>
+        <span class="nav-description">Zdrowie</span>
+      </li>
+      <li id="unit12">
+        <h3 class="nav-title">UNIT 12</h3>
+        <span class="nav-description">XX</span>
+      </li>
+      <li id="unit13">
+        <h3 class="nav-title">UNIT 13</h3>
+        <span class="nav-description">Świat przyrody</span>
+      </li>
+      <li id="unit14">
+        <h3 class="nav-title">UNIT 14</h3>
+        <span class="nav-description">Państwo i społeczeństwo</span>
+      </li>
+    </ul>
+  </nav>
 </body>
 </html>
